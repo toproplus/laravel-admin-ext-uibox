@@ -1,8 +1,8 @@
 {
     "name": "laravel-admin-widgets/uibox",
-    "description": "基于laravel-admin的ui扩展",
+    "description": "基于laravel-admin的ui组件",
     "type": "library",
-    "keywords": ["laravel-admin", "extension", "uibox"],
+    "keywords": ["laravel-admin", "laravel-admin-ext", "extension", "uibox"],
     "homepage": "https://github.com/toproplus/laravel-admin-ext-uibox",
     "license": "MIT",
     "authors": [

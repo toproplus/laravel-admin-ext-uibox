@@ -1,5 +1,5 @@
 
-## 基于laravel-admin的UI小工具
+## laravel-admin UI组件
 laravel-admin extension
 
 ### 安装
