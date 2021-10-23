@@ -1,0 +1,33 @@
+{
+    "name": "laravel-admin-ext/uibox",
+    "description": "基于laravel-admin的ui扩展",
+    "type": "library",
+    "keywords": ["laravel-admin", "extension"],
+    "homepage": "https://github.com/laravel-admin-ext/uibox",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "toproplus",
+            "email": "keepupwork@163.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "encore/laravel-admin": "~1.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Toproplus\\UiBox\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Toproplus\\UiBox\\UiBoxServiceProvider"
+            ]
+        }
+    }
+}
