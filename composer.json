@@ -1,5 +1,5 @@
 {
-    "name": "laravel-admin-ext/uibox",
+    "name": "laravel-admin-widgets/uibox",
     "description": "基于laravel-admin的ui扩展",
     "type": "library",
     "keywords": ["laravel-admin", "extension"],
