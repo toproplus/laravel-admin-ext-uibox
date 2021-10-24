@@ -29,7 +29,7 @@ class StasticsInfoBox
     {
         $isRequest = (!$stastics && $requestUrl) ? 1 : 0;
         $class = 'stasticsClass' . Str::random(12);
-        $idName = 'StasticsId' . Str::random(12);
+        $idName = 'stasticsId' . Str::random(12);
         $columnWdith = bcdiv(100, count($stastics) ?: 1, 8);
         $this->data = compact('description','stastics', 'url', 'color', 'icon', 'requestUrl', 'isRequest', 'class', 'idName', 'columnWdith');
     }
