@@ -1,5 +1,5 @@
 {
-    "name": "laravel-admin-widgets/uibox",
+    "name": "toproplus/laravel-admin-ext-uibox",
     "description": "基于laravel-admin的ui组件",
     "type": "library",
     "keywords": ["laravel-admin", "laravel-admin-ext", "extension", "uibox"],
