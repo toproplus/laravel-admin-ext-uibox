@@ -15,6 +15,6 @@ class UiBox extends Extension
     public $menu = [
         'title' => 'Uibox',
         'path'  => 'uibox',
-        'icon'  => 'fa-gears',
+        'icon'  => 'fa-square-o',
     ];
 }

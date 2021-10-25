@@ -14,13 +14,6 @@ use Encore\Admin\Layout\Column;
 
 class UiBoxController extends Controller
 {
-    protected $prefix;
-
-    public function __construct()
-    {
-        $this->prefix = config('admin.route.prefix');
-
-    }
 
     public function index(Content $content)
     {
@@ -46,8 +39,9 @@ class UiBoxController extends Controller
                     $column->append($stastics);
                 });
                 $row->column(12, function (Column $column) {
-                    $stastics = new StasticsInfoBox('最近7天新增用户数', [], 'purple', 'database', '/', "/$this->prefix/uibox/StasticsInfoBox/users");
+                    $stastics = new StasticsInfoBox('最近7天新增用户数', [], 'purple', 'database', admin_url('uibox'), admin_url('uibox/StasticsInfoBox/users'));
                     $column->append($stastics);
+
                 });
             });
     }
@@ -70,18 +64,11 @@ class UiBoxController extends Controller
      */
     public function jsonFormatBox(Content $content)
     {
-        $headers = ['序号', '订单号', '支付回调', '时间'];
+        $headers = ['序号', '字符串', '随机JSON', '时间'];
         $data = [];
         for ($i = 10; $i > 0; $i--){
-            $notify = [
-                'respCode' => '00',
-                'respMsg' => '支付成功',
-                'sign' => Str::random(32),
-                'orderNo' => Str::random(16),
-                'amount' => random_int(1, 999999),
-                'payTime' => time()
-            ];
-            $jsonStrings = json_encode($notify, JSON_UNESCAPED_UNICODE);
+            $array = $this->getRandomArray();
+            $jsonStrings = json_encode($array, JSON_UNESCAPED_UNICODE);
             $jsonFormat = new JsonFormatBox($jsonStrings);
             $temp = [$i, Str::random(16), $jsonFormat, date('Y-d-m H:i:s')];
             array_push($data, $temp);
@@ -93,5 +80,30 @@ class UiBoxController extends Controller
             ->description('UiBox-Json字符串格式化')
             ->row($box);
     }
+
+    protected function getRandomArray($flag=0)
+    {
+        if ($flag > 8) {
+            return Str::random(8);
+        }
+        $array = [];
+        $length = rand(1, 8);
+        for ($index = 0; $index <= $length; $index++) {
+            if (in_array($index, [3, 6])) {
+                $flag++;
+                $array[Str::random(8)] = $this->getRandomArray($flag);
+                continue;
+            }
+            $temp = [];
+            $len = rand(1, 8);
+            for ($i = 0; $i <= $len; $i++) {
+                $temp[Str::random(8)]  = Str::random(8);
+            }
+            $array[Str::random(8)] = $temp;
+        }
+        return $array;
+    }
+
+
 
 }

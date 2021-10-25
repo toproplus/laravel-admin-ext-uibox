@@ -1,0 +1,74 @@
+/*index*/
+.unibox-index-title{
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+}
+
+/*JsonFormatBox*/
+.jsonFormatContainer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.2);
+}
+.jsonFormatContainer > .jsonFormatViewShow{
+    margin: 3.5% auto 30px auto;
+    padding: 15px;
+    width: 75%;
+    height: 80%;
+    background: #ffffff;
+    overflow-y: scroll;
+    border-radius: 5px;
+}
+.jsonFormatContainer > .jsonFormatActions{
+    background-color: #ffffff;
+    width: 200px;
+    height: 45px;
+    border-radius: 5px;
+    line-height: 45px;
+    margin: 0px auto;
+}
+.jsonFormatContainer > .jsonFormatActions > i{
+    width: 98px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    cursor: pointer;
+
+}
+.jsonFormatViewShow::-webkit-scrollbar {
+    width : 8px;
+    height: 8px;
+}
+.jsonFormatViewShow::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #CCCCCC;
+}
+.jsonFormatViewShow::-webkit-scrollbar-track {
+    background: #ffffff;
+    border-radius: 10px;
+}
+/*StasticsInfoBox*/
+.info-boxs-inline-box > div{
+    float: left;
+    text-align: left;
+}
+.info-boxs-centext-num,
+.info-boxs-centext-tip{
+    font-size: 3rem !important;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow:hidden;
+    padding-right:6px;
+}
+.info-boxs-centext-tip{
+    font-size: 1.5rem !important;
+}
+.info-boxs-footer-text{
+    height: 30px;
+    line-height:25px;
+}
