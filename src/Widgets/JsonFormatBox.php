@@ -22,7 +22,7 @@ class JsonFormatBox
      * @param string $jsonFormatIcon 图标
      * @param string $jsonFormatTips 跳转提示
      */
-    public function __construct(string $jsonFormatStrings, string $jsonFormatIcon = 'fa-info-circle', string $jsonFormatTips = '点击查看详情')
+    public function __construct(string $jsonFormatStrings, string $jsonFormatIcon = 'info-circle', string $jsonFormatTips = '点击查看详情')
     {
         $jsonFormatRandStr = Str::random(12);
         $this->data = compact('jsonFormatStrings', 'jsonFormatIcon', 'jsonFormatTips', 'jsonFormatRandStr');

@@ -1,4 +1,4 @@
-<a href="javascript:void(0);" onclick="showJsonFormatData('{{$jsonFormatRandStr}}')" class="a{{$jsonFormatRandStr}}"><i class="fa {{$jsonFormatIcon}}"></i> {{$jsonFormatTips}}</a>
+<a href="javascript:void(0);" onclick="showJsonFormatData('{{$jsonFormatRandStr}}')" class="a{{$jsonFormatRandStr}}"><i class="fa fa-{{$jsonFormatIcon}}"></i> {{$jsonFormatTips}}</a>
 <div class="jsonFormatContainer{{$jsonFormatRandStr}} jsonFormatContainer" style="display: none">
     <div class="jsonFormatViewShow{{$jsonFormatRandStr}} jsonFormatViewShow"></div>
     <div class="jsonFormatActions">
