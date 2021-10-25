@@ -3,7 +3,7 @@
 laravel-admin extension UiBox
 
 ### 安装
-拉取
+拉取 [package](https://packagist.org/packages/toproplus/laravel-admin-ext-uibox)
 > composer require toproplus/laravel-admin-ext-uibox
 
 发布资源
