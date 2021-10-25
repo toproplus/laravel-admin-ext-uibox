@@ -1,9 +1,9 @@
 
 ## laravel-admin UI组件
-laravel-admin extension
+laravel-admin extension UiBox
 
 ### 安装
-
+拉取
 > composer require toproplus/laravel-admin-ext-uibox
 
 发布资源
