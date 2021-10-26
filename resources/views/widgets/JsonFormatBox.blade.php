@@ -9,7 +9,6 @@
 
 <span class="jsonFormatViewData{{$jsonFormatRandStr}}"  style="display: none">{{$jsonFormatStrings}}</span>
 
-
 <script type="text/javascript">
     $(function () {
         renderJsonFormat('{{$jsonFormatRandStr}}');

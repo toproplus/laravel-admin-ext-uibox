@@ -81,6 +81,11 @@ class UiBoxController extends Controller
             ->row($box);
     }
 
+    /**
+     * 随机数组
+     * @param int $flag
+     * @return array|string
+     */
     protected function getRandomArray($flag=0)
     {
         if ($flag > 8) {

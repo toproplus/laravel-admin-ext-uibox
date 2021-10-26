@@ -13,6 +13,7 @@ function getJsonStr(randStr) {
     let jsonStr = $('.jsonFormatViewData' + randStr).html();
     return jsonStr;
 }
+
 function showJsonFormatData(randStr) {
     closeJsonFormatView();
     $('.jsonFormatContainer' + randStr).show();
@@ -67,4 +68,11 @@ function staticsInfoBoxRender(isRequest, requestUrl, className, idName)
             }
         });
     }
+}
+/*MarkdownBox*/
+function showdownRender(markdownText, ContainerId) {
+    let converter = new showdown.Converter(),
+        html      = converter.makeHtml(markdownText);
+    converter.setFlavor('github');
+    $(ContainerId).html(html);
 }

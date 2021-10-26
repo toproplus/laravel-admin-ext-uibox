@@ -22,13 +22,13 @@
     height: 80%;
     background: #ffffff;
     overflow-y: scroll;
-    border-radius: 5px;
+    border-radius: 5px !important;
 }
 .jsonFormatContainer > .jsonFormatActions{
     background-color: #ffffff;
     width: 200px;
     height: 45px;
-    border-radius: 5px;
+    border-radius: 5px !important;
     line-height: 45px;
     margin: 0px auto;
 }
@@ -45,12 +45,12 @@
     height: 8px;
 }
 .jsonFormatViewShow::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: #CCCCCC;
+    border-radius: 5px;
+    background-color: #c1c1c1;
 }
 .jsonFormatViewShow::-webkit-scrollbar-track {
     background: #ffffff;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 /*StasticsInfoBox*/
 .info-boxs-inline-box > div{
@@ -62,13 +62,14 @@
     font-size: 3rem !important;
     text-overflow: ellipsis;
     white-space: nowrap;
-    overflow:hidden;
-    padding-right:6px;
+    overflow: hidden;
+    padding-right: 6px;
 }
 .info-boxs-centext-tip{
-    font-size: 1.5rem !important;
+    font-size: 1.45rem !important;
 }
 .info-boxs-footer-text{
     height: 30px;
-    line-height:25px;
+    line-height: 25px;
+    font-size: 1.5rem !important;
 }
