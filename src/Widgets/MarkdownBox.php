@@ -28,7 +28,7 @@ class MarkdownBox
     {
         $admin = new Admin();
         $admin->disablePjax();
-        $admin::js('https://cdn.jsdelivr.net/npm/showdown@1.9.1/dist/showdown.min.js');
+        $admin::js('vendor/toproplus/laravel-admin-ext-uibox/js/showdown.min.js');
         return $this->html();
 
     }
