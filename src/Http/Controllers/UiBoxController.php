@@ -31,10 +31,10 @@ class UiBoxController extends Controller
 
         return $content
             ->title('StasticsInfoBox')
-            ->description('UiBox-统计信息展示看板')
+            ->description('统计信息展示看板')
             ->row(function (Row $row){
                 $row->column(12, function (Column $column) {
-                    $data = ['总计' => 999999, '昨天' => 999, '今天' => 999];
+                    $data = ['总计' => random_int(1, 999999), '昨天' => random_int(1, 999999), '今天' => random_int(1, 999999)];
                     $stastics = new StasticsInfoBox('新增用户数', $data, 'purple', 'users');
                     $column->append($stastics);
                 });
@@ -74,10 +74,10 @@ class UiBoxController extends Controller
             array_push($data, $temp);
         }
         $table = new Table($headers,$data);
-        $box = new Box('Json格式化演示', $table);
+        $box = new Box('', $table);
         return $content
             ->title('JsonFormatBox')
-            ->description('UiBox-Json字符串格式化')
+            ->description('Json字符串格式化')
             ->row($box);
     }
 

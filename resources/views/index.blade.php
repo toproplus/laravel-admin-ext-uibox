@@ -1,7 +1,7 @@
 <div class="container">
      <div class="row">
          <b class="unibox-index-title col-md-6 col-md-offset-3">
-             欢迎使用laravel-admin扩展UiBox组件
+             <h3>欢迎使用laravel-admin扩展UiBox组件</h3>
          </b>
      </div>
      <div class="row">

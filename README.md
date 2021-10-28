@@ -41,8 +41,6 @@ $row->column(12, function (Column $column) {
 });
 ```
 
-
-
 ### 演示
 
 安装UiBox扩展后，打开路由`/admin/uibox`查看演示

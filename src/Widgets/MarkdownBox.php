@@ -10,11 +10,18 @@ class MarkdownBox
 
     protected $view = 'uibox::widgets.MarkdownBox';
     protected $data = [];
+    protected $theme;
 
 
-    public function __construct(string $markdownStrings)
+    /**
+     * MarkdownBox constructor.
+     * @param string $markdownStrings
+     * @param string $theme  default|okaidia|solarized-light|tomorrow-night
+     */
+    public function __construct(string $markdownStrings, string $theme = 'okaidia')
     {
         $randomStr = Str::random(18);
+        $this->theme = $theme;
         $this->data = compact('markdownStrings', 'randomStr');
     }
 
@@ -28,7 +35,9 @@ class MarkdownBox
     {
         $admin = new Admin();
         $admin->disablePjax();
-        $admin::js('vendor/toproplus/laravel-admin-ext-uibox/js/showdown.min.js');
+        $admin::css("vendor/toproplus/laravel-admin-ext-uibox/prism/{$this->theme}/prism.css");
+        $admin::js("vendor/toproplus/laravel-admin-ext-uibox/js/showdown.min.js");
+        $admin::js("vendor/toproplus/laravel-admin-ext-uibox/prism/{$this->theme}/prism.js");
         return $this->html();
 
     }
