@@ -69,7 +69,7 @@ class UiBoxController extends Controller
         for ($i = 10; $i > 0; $i--){
             $array = $this->getRandomArray();
             $jsonStrings = json_encode($array, JSON_UNESCAPED_UNICODE);
-            $jsonFormat = new JsonFormatBox($jsonStrings);
+            $jsonFormat = new JsonFormatBox($jsonStrings, 'square-o', '点击查看Json格式化');
             $temp = [$i, Str::random(16), $jsonFormat, date('Y-d-m H:i:s')];
             array_push($data, $temp);
         }
