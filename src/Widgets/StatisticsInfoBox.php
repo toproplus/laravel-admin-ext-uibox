@@ -7,16 +7,16 @@ use Illuminate\Support\Str;
 
 /**
  * 统计信息展示看板
- * Class StasticsInfoBox
+ * Class StatisticsInfoBox
  */
-class StasticsInfoBox
+class StatisticsInfoBox
 {
 
-    protected $view = 'uibox::widgets.StasticsInfoBox';
+    protected $view = 'uibox::widgets.StatisticsInfoBox';
     protected $data = [];
 
     /**
-     * StasticsInfoBox constructor.
+     * StatisticsInfoBox constructor.
      * @param string $description 看板底部文字
      * @param array $stastics 看板数据 (获取异步数据时，传空数组)
      * @param string $color 背景颜色 (如：aqua,orange,blue)
@@ -25,13 +25,13 @@ class StasticsInfoBox
      * @param string $requestUrl 异步请求数据的地址
      * @throws \Exception
      */
-    public function __construct(string $description, array $stastics, string $color, string $icon, string $url = 'javascript:void(0);', string $requestUrl = '')
+    public function __construct(string $description, array $statistics, string $color, string $icon, string $url = 'javascript:void(0);', string $requestUrl = '')
     {
-        $isRequest = (!$stastics && $requestUrl) ? 1 : 0;
+        $isRequest = (!$statistics && $requestUrl) ? 1 : 0;
         $class = 'stasticsClass' . Str::random(12);
         $idName = 'stasticsId' . Str::random(12);
-        $columnWdith = bcdiv(100, count($stastics) ?: 1, 8);
-        $this->data = compact('description','stastics', 'url', 'color', 'icon', 'requestUrl', 'isRequest', 'class', 'idName', 'columnWdith');
+        $columnWdith = bcdiv(100, count($statistics) ?: 1, 8);
+        $this->data = compact('description','statistics', 'url', 'color', 'icon', 'requestUrl', 'isRequest', 'class', 'idName', 'columnWdith');
     }
 
 

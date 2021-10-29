@@ -8,9 +8,9 @@ use Encore\Admin\Widgets\Table;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Str;
 use Toproplus\UiBox\Widgets\JsonFormatBox;
-use Toproplus\UiBox\Widgets\StasticsInfoBox;
 use Encore\Admin\Layout\Row;
 use Encore\Admin\Layout\Column;
+use Toproplus\UiBox\Widgets\StatisticsInfoBox;
 
 class UiBoxController extends Controller
 {
@@ -26,20 +26,20 @@ class UiBoxController extends Controller
     /**
      * UiBox-统计信息展示看板
      */
-    public function stasticsInfoBox(Content $content)
+    public function statisticsInfoBox(Content $content)
     {
 
         return $content
-            ->title('StasticsInfoBox')
+            ->title('StatisticsInfoBox')
             ->description('统计信息展示看板')
             ->row(function (Row $row){
                 $row->column(12, function (Column $column) {
                     $data = ['总计' => random_int(1, 999999), '昨天' => random_int(1, 999999), '今天' => random_int(1, 999999)];
-                    $stastics = new StasticsInfoBox('新增用户数', $data, 'purple', 'users');
+                    $stastics = new StatisticsInfoBox('新增用户数', $data, 'purple', 'users');
                     $column->append($stastics);
                 });
                 $row->column(12, function (Column $column) {
-                    $stastics = new StasticsInfoBox('最近7天新增用户数', [], 'purple', 'database', admin_url('uibox'), admin_url('uibox/StasticsInfoBox/users'));
+                    $stastics = new StatisticsInfoBox('最近7天新增用户数', [], 'purple', 'database', admin_url('uibox'), admin_url('uibox/StatisticsInfoBox/users'));
                     $column->append($stastics);
 
                 });
@@ -49,7 +49,7 @@ class UiBoxController extends Controller
     /**
      * 最近7天新增用户数 异步数据
      */
-    public function usersStatics()
+    public function usersStatitics()
     {
         $stastics = [];
         for ($i = 0; $i < 7; $i++) {

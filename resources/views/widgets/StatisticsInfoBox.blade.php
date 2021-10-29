@@ -2,8 +2,8 @@
     <div class="col-md-12">
         <div class="small-box bg-{{$color}}">
             <div class="inner info-boxs-inline-box {{$class}}">
-                @if (!$isRequest && $stastics)
-                    @foreach ($stastics as $key => $val)
+                @if (!$isRequest && $statistics)
+                    @foreach ($statistics as $key => $val)
                         <div  style="width: {{$columnWdith}}%;">
                             <p class="info-boxs-centext-num" title="{{$val}}">{{$val}}<p/>
                             <p class="info-boxs-centext-tip">{{$key}}</p>
