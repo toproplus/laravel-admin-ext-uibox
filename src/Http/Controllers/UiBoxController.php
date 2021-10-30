@@ -49,7 +49,7 @@ class UiBoxController extends Controller
     /**
      * 最近7天新增用户数 异步数据
      */
-    public function usersStatitics()
+    public function usersStatistics()
     {
         $stastics = [];
         for ($i = 0; $i < 7; $i++) {

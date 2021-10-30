@@ -1,6 +1,6 @@
 <div class="container">
      <div class="row">
-         <b class="unibox-index-title col-md-6 col-md-offset-3">
+         <b class="unibox-index-title col-md-6 col-md-offset-3" style="text-align: center">
              <h3>欢迎使用laravel-admin扩展UiBox组件</h3>
          </b>
      </div>
