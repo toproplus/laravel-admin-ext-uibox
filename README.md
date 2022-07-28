@@ -10,7 +10,7 @@ composer require toproplus/laravel-admin-ext-uibox
 
 发布资源
 ```bash
-php artisan vendor:publish --provider=Toproplus\UiBox\UiBoxServiceProvider
+php artisan vendor:publish --provider="Toproplus\UiBox\UiBoxServiceProvider"
 ```
 
 
@@ -23,7 +23,7 @@ use Toproplus\UiBox\Widgets\StatisticsInfoBox;
 $row->column(12, function (Column $column) {
     $data = ['总计' => 999999, '昨天' => 999, '今天' => 999];
     $stastics = new StatisticsInfoBox('新增用户数', $data, 'purple', 'users');
-    $column->append($stastics);
+    $column->append($stastics->render());
 });
 ```
 - JsonFormatBox 组件
@@ -32,7 +32,7 @@ use Toproplus\UiBox\Widgets\JsonFormatBox;
 
 $grid->column('json_string', 'Json字符串')->display(function ($json_string) {
     $jsonFormat = new JsonFormatBox($json_string);
-    return $jsonFormat;
+    return $jsonFormat->render();
 });
 ```
 - MarkdownBox 组件
@@ -44,7 +44,7 @@ $row->column(12, function (Column $column) {
      $mdText = file_get_contents('vendor/toproplus/laravel-admin-ext-uibox/md/MarkdownBox.md');
      $theme = 'okaidia';
      $data = new MarkdownBox($mdText, $theme);
-     $column->append($data);
+     $column->append($data->render());
 });
 ```
 

@@ -6,7 +6,7 @@
                     @foreach ($statistics as $key => $val)
                         <div  style="width: {{$columnWdith}}%;">
                             <p class="info-boxs-centext-num" title="{{$val}}">{{$val}}<p/>
-                            <p class="info-boxs-centext-tip">{{$key}}</p>
+                            <p class="info-boxs-centext-tip" title="{{$key}}">{{$key}}</p>
                         </div>
                     @endforeach
                 @else
@@ -42,7 +42,7 @@
     <% for(var i = 0; i < list.length; i++){ %>
     <div style="width: <%= columnWdith %>%;">
         <p class="info-boxs-centext-num" title="<%= list[i].val %>"><%= list[i].val %></p>
-        <p class="info-boxs-centext-tip"><%= list[i].key %></p>
+        <p class="info-boxs-centext-tip" title="<%= list[i].key %>"><%= list[i].key %></p>
     </div>
     <% } %>
 </script>
